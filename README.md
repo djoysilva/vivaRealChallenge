@@ -1,17 +1,16 @@
 # **README** #
 
 #**What is this repository for?**#
-API to VivaReal challenge. - Creating and searching Properties
+API to study and to VivaReal challenge. - Creating and searching Properties
 version 1.5
 
 # **How do I get set up?** #
-API created whith Java Project using Eclipse, so you just need the Eclipse IDE
+You just need the Eclipse IDE
  
-no Database configuration
+creating Database configuration
 
 To run tests you need to access vivaReal/src/br/com/vivaReal/test
 
-I still don't have experience with json or Spring, so I chose to make all the challenges with the native way and with my logic, making the mvp working well.
 
 # **Talk to**#
 Joyce Silva
