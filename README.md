@@ -5,7 +5,7 @@ API to VivaReal challenge. - Creating and searching Properties
 version 1
 
 # **How do I get set up?** #
-API created whith Java Project using Eclipse, so you just need the Eclipse IDE
+API created with Java Project using Eclipse, so you just need the Eclipse IDE
  
 no Database configuration
 
