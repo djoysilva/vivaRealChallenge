@@ -1,5 +1,7 @@
 package br.com.vivareal.bo;
 
+import java.util.List;
+
 import br.com.vivareal.beans.Property;
 import br.com.vivareal.dao.PropertyDAO;
 import br.com.vivareal.exception.Excep;
@@ -30,7 +32,14 @@ public class PropertyBO {
 		dao.read();
 	}
 	
+	public List<Property> readList() throws Exception{
+		return dao.readList();
+	}
 	
+	public void update(Property property) throws Exception{
+		dao.update(property);
+	}
+		
 	public Property search(int id) throws Exception{
 		if(id<0){
 			throw new Excep("invalid Id"); 

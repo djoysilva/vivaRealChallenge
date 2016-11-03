@@ -1,0 +1,69 @@
+package br.com.vivareal.test;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.swing.JOptionPane;
+
+import br.com.vivareal.beans.Property;
+import br.com.vivareal.dao.PropertyDAO;
+import br.com.vivareal.exception.Excep;
+
+public class TestRectangle {
+	
+	public static int integer(String msg){
+		return Integer.parseInt(JOptionPane.showInputDialog(msg));
+	}
+
+	
+	//Test to validate the RectangleSearch, input the values when you implement the objProperty.
+	
+	public static void main(String[] args)throws Exception{
+		PropertyDAO dao = new PropertyDAO();
+		List<Property> list = new ArrayList<Property>();
+		
+		Property objProperty= new Property();
+		objProperty.setX(1257);
+		objProperty.setY(928);
+		
+		Property objProperty2= new Property();
+		objProperty2.setX(1200);
+		objProperty2.setY(900);
+		
+		Property objProperty3= new Property();
+		objProperty3.setX(400);
+		objProperty3.setY(300);
+		
+		dao.create(objProperty);
+		dao.create(objProperty2);
+		dao.create(objProperty3);
+		try{
+			
+			//Always consider that point A start at the upper left corner and the point B start at the bottom right corner
+			
+			/* if you want make the test in console consider this test:
+			
+			int ax = integer("Write the latitude of point A: ");
+			int ay = integer("Write the longitude of point A: ");
+			int bx = integer("Write the latitude of point B: ");
+			int by = integer("Write the longitude of point B: ");
+			
+			dao.rectangleSearch(ax, ay, bx, by);
+			*/
+			
+			int ax = (0);
+			int ay = (0);
+			int bx = (1400);
+			int by = (1000);
+			
+			list = dao.rectangleSearch(ax, ay, bx, by);
+			System.out.println("Found " + list.size() + " properties.\n");
+			for(Property property : list){
+				System.out.println("------------------");
+				System.out.println(property.getAll()+"\n");
+			}
+		}catch(Exception e){
+			throw new Excep("Error", e);
+		}
+	}	
+}

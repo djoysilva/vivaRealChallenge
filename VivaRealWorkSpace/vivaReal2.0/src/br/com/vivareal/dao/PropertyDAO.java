@@ -78,6 +78,29 @@ public class PropertyDAO {
 			}
 		}	
 	}
+	/* Metod that <b>return the list</b> the propertyList
+	 * @author Joyce Silva
+	 * @return propertyList - A list with objects of type Property;
+	 * @see Property.java
+	 */
+	public List<Property> readList(){
+		if(propertyList.isEmpty()){
+			return null;
+		}else{
+			return propertyList;
+		}	
+	}
+	
+	/* Metod that <b>alter</b> a Property in propertyList
+	 * @param property - An object of type Property
+	 * @author Joyce Silva
+	 * @see Property.java
+	 */
+	
+	public void update(Property property) throws Exception{
+		propertyList.remove(property.getId());
+		propertyList.add(property);
+	}
 	
 	/* Metod that <b>search</b> a Property in propertyList
 	 * @param list - An list for objects of type Property
@@ -119,5 +142,5 @@ public class PropertyDAO {
 				System.out.println("\n-----------------\n");
 		}
 		}
-	}	
+	}
 }

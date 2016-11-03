@@ -100,6 +100,16 @@ public class Property implements Serializable{
 		this.squareMeters = squareMeters;
 	}
 	
+	public String getProvince(){
+		String msg = "";
+		if(provinces[1]!= null){
+			msg += "\nProvinces: " + provinces[0] + "and " + provinces[1];
+		}else{
+			msg += "\nProvinces: " + provinces[0];
+		}
+		return msg; 		
+	}
+	
 	public String getAll(){
 		String msg = ("Id: " + id + "\nTitle: " + title + "\nPrice: " + price + "\nDescription: " + description + "\nLat.: " 
 						+ x + "\nLong.: " + y + "\nBeds: " + beds + "\nBaths: " + baths + "\nSquareMeters: " + squareMeters);

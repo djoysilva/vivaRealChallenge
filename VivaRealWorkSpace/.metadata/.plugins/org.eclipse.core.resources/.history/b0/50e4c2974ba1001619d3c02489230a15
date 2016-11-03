@@ -1,0 +1,41 @@
+package br.com.vivareal.servlet;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import br.com.vivareal.beans.Property;
+import br.com.vivareal.bo.PropertyBO;
+
+public class propertyServlet extends HttpServlet{
+	private static final long serialVersionUID = 1L;
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		String action = req.getParameter("action");
+		PropertyBO bo = new PropertyBO();
+		
+		switch(action){
+			case "create":	Property property = new Property();
+							int id = Integer.parseInt(req.getParameter("id"));
+							String title = req.getParameter("title");
+							double price = Double.parseDouble(req.getParameter("price"));
+							String description = req.getParameter("description");
+							int x = Integer.parseInt(req.getParameter("latitude"));
+							int y = Integer.parseInt(req.getParameter("longitude"));
+							int beds = Integer.parseInt(req.getParameter("beds"));
+							int baths = Integer.parseInt(req.getParameter("baths"));
+							double square = Double.parseDouble(req.getParameter("square"));
+							
+							try{
+								bo.create(property);
+							}catch(Exception e){
+								throw new Exception("Error.", e); 
+							}
+							
+							break;
+			default: break;				
+		}
+	}
+}
