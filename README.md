@@ -20,10 +20,6 @@ joycesilva.web@gmail.com
 
 Github - https://github.com/djoysilva
 
-11 94551 8834
-
-11 3673 4175
-
 
 # **README2** #
 
