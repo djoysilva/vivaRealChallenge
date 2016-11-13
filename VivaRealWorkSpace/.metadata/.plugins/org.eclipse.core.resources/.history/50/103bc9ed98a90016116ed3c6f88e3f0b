@@ -1,0 +1,36 @@
+package br.com.vivareal.test;
+
+public class Properties {
+	private String name;
+	private int id;
+	
+	public Properties(String name, int id) {
+		super();
+		this.name = name;
+		this.id = id;
+	}
+	
+	public Properties() {
+		super();
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	public String search(){
+		return "Nome: "+ name + "\nId:" + id;
+	}
+}

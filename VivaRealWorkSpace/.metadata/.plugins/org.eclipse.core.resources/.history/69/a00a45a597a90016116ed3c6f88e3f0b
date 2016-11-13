@@ -1,0 +1,37 @@
+package br.com.vivareal.test;
+import br.com.vivareal.beans.Property;
+import br.com.vivareal.bo.PropertyBO;
+import br.com.vivareal.exception.Excep;
+import junit.framework.TestCase;
+
+public class JunitTest extends TestCase{
+	public void testSearch() throws Exception{
+		PropertyBO bo = new PropertyBO();
+		Property objProperty= new Property();
+		Property propertyReturned = new Property();
+		int id = 10;
+		
+		try{
+			objProperty.setId(1);
+			objProperty.setTitle("Imóvel código 1, com 3 quartos e 2 banheiros.");
+			objProperty.setPrice(643.000);
+			objProperty.setDescription("Laboris quis quis elit commodo eiusmod qui exercitation. In laborum fugiat quis minim occaecat id.");
+			objProperty.setX(1257);
+			objProperty.setY(928);
+			objProperty.setBeds(3);
+			objProperty.setBaths(2);
+			objProperty.setSquareMeters(61);
+			bo.create(objProperty);
+			
+			propertyReturned = bo.search(id);
+			assertEquals(objProperty, propertyReturned);
+			
+		}catch(Exception e){
+			throw new Excep("Exception", e);
+		}
+		
+		
+		
+		
+	}
+}

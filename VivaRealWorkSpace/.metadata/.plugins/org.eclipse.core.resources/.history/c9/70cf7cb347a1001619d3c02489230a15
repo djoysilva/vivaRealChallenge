@@ -1,5 +1,0 @@
-package br.com.vivareal.servlet;
-
-public class propertyServlet extends HttpServlet{
-	
-}

@@ -1,0 +1,16 @@
+package br.com.vivareal.test;
+
+import junit.framework.TestCase;
+
+public class JunitTest extends TestCase{
+	public void testCreate(){
+		Properties properties = new Properties("Property", 1);
+		
+		int id = 1;
+		
+		
+		String retorno = new String("Nome: Property " + "\nId: 1");
+		String retornado = properties.search(id);
+		assertEquals(retorno, retornado);
+	}
+}

@@ -1,0 +1,11 @@
+package br.com.vivareal.test;
+
+import junit.framework.TestCase;
+
+public class JunitTest extends TestCase{
+	public void testCreate(){
+		String name = new String("Property");
+		int id = 1;
+		String returned = new String(name + id);
+	}
+}
