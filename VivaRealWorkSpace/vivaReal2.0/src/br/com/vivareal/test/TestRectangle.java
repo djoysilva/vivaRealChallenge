@@ -1,8 +1,5 @@
 package br.com.vivareal.test;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.swing.JOptionPane;
 
 import br.com.vivareal.beans.Property;
@@ -20,7 +17,6 @@ public class TestRectangle {
 	
 	public static void main(String[] args)throws Exception{
 		PropertyDAO dao = new PropertyDAO();
-		List<Property> list = new ArrayList<Property>();
 		
 		Property objProperty= new Property();
 		objProperty.setX(1257);
